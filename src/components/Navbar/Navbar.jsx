@@ -9,9 +9,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -28,16 +26,20 @@ const Navbar = () => {
     setActiveSection(id);
     setIsOpen(false);
   };
+
   return (
     <nav
-      className={`fixed top-0 w-full transition duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw] ${
-        isScrolled
-          ? "bg-[#050414] bg-opacity-50 backdrop-blur-md shadow-md"
-          : "bg-transparent"
-      } `}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 px-[7vw] md:px-[7vw] lg:px-[20vw]
+        ${
+          isScrolled
+            ? "bg-[#050414]/60 backdrop-blur-md shadow-md"
+            : isOpen
+            ? "bg-transparent backdrop-blur-lg"
+            : "bg-transparent"
+        }`}
     >
-      <div className="text-white py-5 flex justify-between items-center">
-        {/* logo */}
+      <div className="text-white py-5 flex justify-between items-center relative z-50">
+        {/* Logo */}
         <div className="text-lg font-semibold cursor-pointer">
           <span className="text-[#8245ec]">&lt;</span>
           <span className="text-white">Piyush</span>
@@ -46,30 +48,29 @@ const Navbar = () => {
           <span className="text-[#8245ec]">&gt;</span>
         </div>
 
-        {/* desktop menu items */}
-
-        <ul className="md:flex hidden space-x-8 text-gray-300">
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-gray-300">
           {menuItems.map((item) => (
             <li key={item.id}>
               <button
                 onClick={() => handleMenuItemClick(item.id)}
-                className={`
-            cursor-pointer hover:text-[#8245ec] ${
-              activeSection === item.id ? "text-[#8245ec]" : ""
-            }`}
+                className={`cursor-pointer transition-colors duration-300 hover:text-[#8245ec] ${
+                  activeSection === item.id ? "text-[#8245ec]" : ""
+                }`}
               >
                 {item.label}
               </button>
             </li>
           ))}
         </ul>
-        {/* social media icons  */}
+
+        {/* Social Icons (Desktop) */}
         <div className="hidden md:flex space-x-4">
           <a
             href="https://github.com/piyushchauhan3554"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors"
           >
             <FaGithub size={24} />
           </a>
@@ -77,7 +78,7 @@ const Navbar = () => {
             href="https://www.linkedin.com/in/piyush-chauhan-972108259/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors"
           >
             <FaLinkedin size={24} />
           </a>
@@ -85,14 +86,14 @@ const Navbar = () => {
             href="https://leetcode.com/u/piyushchauhan8279/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-[#8245ec]"
+            className="text-gray-300 hover:text-[#8245ec] transition-colors"
           >
             <SiLeetcode size={24} />
           </a>
         </div>
 
-        {/* mobile screen menu icon */}
-        <div className="md:hidden">
+        {/* Mobile Menu Icon */}
+        <div className="md:hidden z-50">
           {isOpen ? (
             <FiX
               className="text-3xl text-[#8245ec] cursor-pointer"
@@ -106,30 +107,40 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      {/* mobile menu items */}
-      {isOpen && (
-        <div className="absolute top-16 left-1/2 transform -translate-x-1/2 w-4/5 bg-[#050414] bg-opacity-50 backdrop-blur-lg z-50 rounded-lg shadow-lg">
-          <ul className="flex flex-col items-center space-y-4 py-4 text-gray-300">
-            {menuItems.map((item) => (
-              <li key={item.id}>
-                <button
-                  onClick={() => handleMenuItemClick(item.id)}
-                  className={`cursor-pointer hover:text-[#8245ec] ${
-                    activeSection === item.id ? "text-[#8245ec]" : ""
-                  }`}
-                >
-                  {item.label}
-                </button>
-              </li>
-            ))}
-            <div className="flex space-x-4">
-              <a
+
+      {/* Mobile Dropdown Menu */}
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center space-y-6 
+        bg-[rgba(5,4,20,0.75)] backdrop-blur-2xl 
+        bg-gradient-to-b from-[#050414]/70 via-[#14102b]/70 to-[#1e1240]/70
+        transition-all duration-500 ease-in-out 
+        ${
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-10 pointer-events-none"
+        }`}
+      >
+        {menuItems.map((item) => (
+          <button
+            key={item.id}
+            onClick={() => handleMenuItemClick(item.id)}
+            className={`text-lg text-gray-300 hover:text-[#8245ec] transition-colors duration-300 ${
+              activeSection === item.id ? "text-[#8245ec]" : ""
+            }`}
+          >
+            {item.label}
+          </button>
+        ))}
+
+        {/* Social Icons (Mobile) */}
+        <div className="flex space-x-5 mt-4">
+          <a
             href="https://github.com/piyushchauhan3554"
             target="_blank"
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-[#8245ec]"
           >
-            <FaGithub size={24} />
+            <FaGithub size={26} />
           </a>
           <a
             href="https://www.linkedin.com/in/piyush-chauhan-972108259/"
@@ -137,7 +148,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-[#8245ec]"
           >
-            <FaLinkedin size={24} />
+            <FaLinkedin size={26} />
           </a>
           <a
             href="https://leetcode.com/u/piyushchauhan8279/"
@@ -145,12 +156,10 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="text-gray-300 hover:text-[#8245ec]"
           >
-            <SiLeetcode size={24} />
+            <SiLeetcode size={26} />
           </a>
-            </div>
-          </ul>
         </div>
-      )}
+      </div>
     </nav>
   );
 };

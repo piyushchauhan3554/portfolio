@@ -1,12 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import "tailwindcss";
 
 @theme {
   @keyframes blob {
-    0% { transform: scale(1); }
-    33% { transform: scale(1.2); }
-    66% { transform: scale(0.8); }
-    100% { transform: scale(1); }
+    0% {
+      transform: scale(1);
+    }
+    33% {
+      transform: scale(1.2);
+    }
+    66% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 
   --animate-blob: blob 10s infinite;
+}
+
+*{
+  font-family: "Outfit",sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-slideDown {
+  animation: slideDown 0.3s ease forwards;
 }
