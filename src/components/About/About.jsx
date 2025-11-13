@@ -33,7 +33,7 @@ const About = () => {
             Hi, I’m
           </h1>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight bg-gradient-to-r from-[#8245ec] to-[#a855f7] bg-clip-text text-transparent">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight bg-linear-to-r from-[#8245ec] to-[#a855f7] bg-clip-text text-transparent">
             Piyush Chauhan
           </h2>
 
@@ -82,7 +82,7 @@ const About = () => {
           <div className="absolute w-80 h-80 sm:w-96 sm:h-96 bg-[#8245ec]/40 rounded-full blur-[110px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
 
           <Tilt
-            className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-[22rem] md:h-[22rem] border-4 border-[#8245ec]/60 rounded-full shadow-[0_0_35px_rgba(130,69,236,0.4)]"
+            className="relative w-64 h-64 sm:w-80 sm:h-80 md:w-88 md:h-88 border-4 border-[#8245ec]/60 rounded-full shadow-[0_0_35px_rgba(130,69,236,0.4)]"
             tiltMaxAngleX={20}
             tiltMaxAngleY={20}
             perspective={1000}

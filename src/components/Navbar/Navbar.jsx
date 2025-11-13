@@ -112,7 +112,7 @@ const Navbar = () => {
       <div
         className={`md:hidden fixed top-0 left-0 w-full h-screen flex flex-col items-center justify-center space-y-6 
         bg-[rgba(5,4,20,0.75)] backdrop-blur-2xl 
-        bg-gradient-to-b from-[#050414]/70 via-[#14102b]/70 to-[#1e1240]/70
+        bg-linear-to-b from-[#050414]/70 via-[#14102b]/70 to-[#1e1240]/70
         transition-all duration-500 ease-in-out 
         ${
           isOpen
