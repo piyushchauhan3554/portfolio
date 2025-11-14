@@ -45,7 +45,7 @@ const Skills = () => {
                       alt={skill.name}
                       className="w-6 h-6 sm:w-7 sm:h-7"
                     />
-                    <span className="text-sm text-gray-300 break-words whitespace-normal min-w-0">
+                    <span className="text-sm text-gray-300 wrap-break-word whitespace-normal min-w-0">
                       {skill.name}
                     </span>
                   </div>
