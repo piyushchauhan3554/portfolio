@@ -25,6 +25,14 @@ const Navbar = () => {
   const handleMenuItemClick = (id) => {
     setActiveSection(id);
     setIsOpen(false);
+
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      // fallback: set hash so browser can try to jump
+      window.location.hash = `#${id}`;
+    }
   };
 
   return (

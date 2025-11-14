@@ -1,7 +1,7 @@
 import "./App.css";
 import Navbar from "./components/Navbar/Navbar";
 import About from "./components/About/About";
-// import Skills from "./components/Skills/Skills";
+import Skills from "./components/Skills/Skills";
 // import Experience from "./components/Experience/Experience";
 // import Work from "./components/Work/Work";
 // import Education from "./components/Education/Education";
@@ -21,6 +21,7 @@ const App = () => {
         <div className="relative pt-20">
           <Navbar />
           <About />
+          <Skills/>
         </div>
       </div>
     </>
