@@ -99,7 +99,7 @@ const Navbar = () => {
 
                 {/* Animated underline */}
                 <span
-                  className="absolute left-0 bottom-0 w-0 h-[2px] bg-[#8245ec] group-hover:w-full transition-all duration-300"
+                  className="absolute left-0 bottom-0 w-0 h-0.5 bg-[#8245ec] group-hover:w-full transition-all duration-300"
                 ></span>
               </button>
             </li>
