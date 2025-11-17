@@ -40,9 +40,8 @@ import cognifyz from "./assets/company_logo/cognifyz.png";
 import ybi from "./assets/company_logo/ybi.jpeg";
 
 // Education Section Logo's
-import glaLogo from "./assets/education_logo/gla_logo.png";
-import bsaLogo from "./assets/education_logo/bsa_logo.png";
-import vpsLogo from "./assets/education_logo/vps_logo.png";
+import stmary from "./assets/education_logo/st-mary.jpeg";
+import coer from "./assets/education_logo/coer.jpeg";
 
 // Project Section Logo's
 import quickai from "./assets/work_logo/quickai.png";
@@ -167,40 +166,31 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: glaLogo,
-    school: "GLA University, Mathura",
-    date: "Sept 2022 - July 2024",
-    grade: "7.81 CGPA",
-    desc: "I have completed my Master's degree (MCA) in Computer Applications from GLA University, Mathura. During my time at GLA, I gained a strong foundation in programming, software development, and computer science principles. I have studied courses such as Data Structures, Algorithms, Object-Oriented Programming, Database Management Systems, Web Development, and Software Engineering. I actively participated in various workshops and technical events, which enhanced my skills and knowledge. My experience at GLA University has been instrumental in shaping my technical abilities and professional growth.",
-    degree: "Master of Computer Applications - MCA",
+    img: coer,
+    school: "Coer University, Roorkee",
+    date: "Sept 2022 - Present",
+    grade: "9.35 CGPA",
+    desc: "I am currently pursuing my Bachelor of Technology (B.Tech) in Computer Science and Engineering (CSE) from COER University, Roorkee. Throughout my academic journey, I have gained a solid understanding of core subjects such as Data Structures and Algorithms, Operating Systems, Computer Networks, Database Management Systems, and Web Development. I have actively worked on multiple projects, participated in hackathons, and improved my skills in both frontend and backend development. My learning experience at COER has helped me grow technically and strengthened my problem-solving and teamwork abilities.",
+    degree: "Bachelor of Technology in CSE",
   },
   {
     id: 1,
-    img: bsaLogo,
-    school: "BSA College, Mathura",
-    date: "Sept 2018 - Aug 2021",
-    grade: "73.2%",
-    desc: "I completed my Bachelor's degree in Computer Science (B.Sc.) from BSA College, Mathura. Throughout my studies, I was immersed in a variety of subjects that deepened my understanding of computing and technology. From exploring Data Structures and Algorithms to diving into Web Development and Database Management Systems, I gained practical insights into the world of software development. My time at BSA College allowed me to work on projects that applied theoretical concepts to real-world problems.",
-    degree: "Bachelor of Science - BSC (Computer Science)",
+    img: stmary,
+    school: "St. Mary's Sr. Sec. School, Haridwar",
+    date: "Apr 2021 - March 2022",
+    grade: "86.8%",
+    desc: "I completed my Class 12 from St. Mary’s Sr. Sec. School, Haridwar, under the CBSE board, with Physics, Chemistry, and Mathematics (PCM) along with Information Practices (IP). My academic experience helped me build a strong foundation in analytical thinking, problem-solving, and basic programming concepts.",
+    degree: "CBSE(XII) - PCM with Information Practices (IP)",
   },
   {
-    id: 2,
-    img: vpsLogo,
-    school: "Vatsalya Public School Govardhan, Mathura",
-    date: "Apr 2017 - March 2018",
-    grade: "78%",
-    desc: "I completed my class 12 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Physics, Chemistry, and Mathematics (PCM) with Computer Science.",
-    degree: "CBSE(XII) - PCM with Computer Science",
-  },
-  {
-    id: 3,
-    img: vpsLogo,
-    school: "Vatsalya Public School Govardhan, Mathura",
-    date: "Apr 2015 - March 2016",
-    grade: "87.5%",
-    desc: "I completed my class 10 education from Vatsalya Public School, Govardhan, under the CBSE board, where I studied Science with Computer.",
-    degree: "CBSE(X), Science with Computer Application",
-  },
+  id: 2,
+  img: stmary,
+  school: "St. Mary's Sr. Sec. School, Haridwar",
+  date: "Apr 2019 - March 2020",
+  grade: "77.8%",
+  desc: "I completed my Class 10 from St. Mary’s Sr. Sec. School, Haridwar, under the CBSE board. This phase helped me develop strong fundamentals across all major subjects and shaped my discipline and academic mindset. It also sparked my early interest in computers and technology, motivating me to pursue the field of Computer Science in higher studies.",
+  degree: "CBSE (X)",
+}
 ];
 
 export const projects = [
