@@ -202,12 +202,13 @@ export const projects = [
     image: quickai,
     tags: [
       "PostgreSQL",
-      "MongoDB",
+      "Express",
       "NodeJs",
       "React JS",
       "APIs",
       "Clerk",
       "Cloudinary",
+      "Vercel"
     ],
     github: "https://github.com/piyushchauhan3554/QuickAi",
     webapp: "https://thequick-ai.vercel.app/",
