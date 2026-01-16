@@ -101,7 +101,7 @@ const About = () => {
             initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.7, duration: 0.6 }}
-            href="https://drive.google.com/file/d/1CQUkmI9rF36H6nxQNbz-SzDHWxfjAKPI/view?usp=sharing"
+            href="https://drive.google.com/file/d/1CQUkmI9rF36H6nxQNbz-SzDHWxfjAKPI/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block text-white py-3 px-8 rounded-full text-lg font-bold transition duration-300 transform hover:scale-105 hover:shadow-[0_0_15px_#8245ec]"
