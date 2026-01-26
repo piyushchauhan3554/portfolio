@@ -47,6 +47,7 @@ import coer from "./assets/education_logo/coer.jpeg";
 import quickai from "./assets/work_logo/quickai.png";
 import quickchat from "./assets/work_logo/quickchat.png";
 import todo from "./assets/work_logo/todo.png";
+import staysphere from "./assets/work_logo/staysphere.png";
 
 export const SkillsInfo = [
   {
@@ -183,19 +184,39 @@ export const education = [
     degree: "CBSE(XII) - PCM with Information Practices (IP)",
   },
   {
-  id: 2,
-  img: stmary,
-  school: "St. Mary's Sr. Sec. School, Haridwar",
-  date: "Apr 2019 - March 2020",
-  grade: "77.8%",
-  desc: "I completed my Class 10 from St. Mary’s Sr. Sec. School, Haridwar, under the CBSE board. This phase helped me develop strong fundamentals across all major subjects and shaped my discipline and academic mindset. It also sparked my early interest in computers and technology, motivating me to pursue the field of Computer Science in higher studies.",
-  degree: "CBSE (X)",
-}
+    id: 2,
+    img: stmary,
+    school: "St. Mary's Sr. Sec. School, Haridwar",
+    date: "Apr 2019 - March 2020",
+    grade: "77.8%",
+    desc: "I completed my Class 10 from St. Mary’s Sr. Sec. School, Haridwar, under the CBSE board. This phase helped me develop strong fundamentals across all major subjects and shaped my discipline and academic mindset. It also sparked my early interest in computers and technology, motivating me to pursue the field of Computer Science in higher studies.",
+    degree: "CBSE (X)",
+  },
 ];
 
 export const projects = [
   {
     id: 0,
+    title: "StaySphere - Web Application",
+    description:
+      "A scalable full-stack accommodation booking platform developed using Node.js, Express, MongoDB, and EJS, following the MVC architecture for clean and maintainable code. The application implements RESTful routing, middleware-based authentication, and secure session management to ensure reliable user experiences. Dynamic EJS templates are used to render interactive user interfaces, while Leaflet.js maps with custom markers visualize property locations, enhancing geospatial awareness and user engagement. Built with a strong focus on performance, usability, and real-world backend practices.",
+    image: staysphere,
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "EJS",
+      "MVC Architecture",
+      "REST APIs",
+      "Passport.js",
+      "Leaflet.js",
+      "Render"
+    ],
+    github: "https://github.com/piyushchauhan3554/StaySphere",
+    webapp: "https://staysphere-1-qmh4.onrender.com",
+  },
+  {
+    id: 1,
     title: "QuickAI - AI Saas Application",
     description:
       "A fully featured AI-powered SaaS application built using the PERN stack (PostgreSQL, Express.js, React.js, and Node.js). The platform integrates advanced AI capabilities to automate tasks, generate intelligent insights, and enhance user productivity. It provides secure authentication, real-time data processing, and a clean, intuitive UI for effortless interaction. Designed with scalability, performance, and modern cloud practices in mind, this application delivers a seamless end-to-end experience for both users and developers.",
@@ -208,13 +229,13 @@ export const projects = [
       "APIs",
       "Clerk",
       "Cloudinary",
-      "Vercel"
+      "Vercel",
     ],
     github: "https://github.com/piyushchauhan3554/QuickAi",
     webapp: "https://thequick-ai.vercel.app/",
   },
   {
-    id: 1,
+    id: 2,
     title: "QuickChat - Full Stack Chat Application",
     description:
       "QuickChat is a full-stack, real-time messaging platform built to deliver fast, secure, and highly interactive communication between users. Powered by React.js on the frontend and Node.js with Express.js on the backend, the application uses Socket.IO to enable instant messaging, live typing indicators, and accurate online/offline user status—all without page reloads.",
@@ -224,7 +245,7 @@ export const projects = [
     webapp: "https://the-chatapp-quickchat.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     title: "To-do List",
     description:
       "Users can add tasks, mark them as completed, edit them, or delete them with a clean and responsive interface. It includes category selection options such as Work, Personal, Study, and Others to keep tasks organized. Real-time updates ensure smooth interactions without refreshing the page. The app also features a modern dark mode for comfortable viewing. This project highlights strong use of DOM manipulation, event handling, and clean UI design using HTML, CSS, and JavaScript.",
